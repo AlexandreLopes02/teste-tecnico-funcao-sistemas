@@ -1,0 +1,10 @@
+﻿CREATE PROC FI_SP_VerificaCliente
+    @CPF VARCHAR(11),
+    @ID BIGINT = 0
+AS
+BEGIN
+    SELECT 1
+    FROM CLIENTES
+    WHERE CPF = @CPF
+      AND ID <> @ID
+END
